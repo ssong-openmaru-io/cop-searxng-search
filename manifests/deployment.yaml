@@ -31,7 +31,7 @@ spec:
             mountPath: /etc/searxng/settings.yml
             subPath: settings.yml
                     
-          - name: limiter
+          - name: config
             mountPath: /etc/searxng/limiter.toml
             subPath: limiter.toml
 
@@ -61,7 +61,3 @@ spec:
         - name: config
           configMap:
             name: searxng-config
-
-        - name: limiter
-          configMap:
-            name: searxng-limiter
