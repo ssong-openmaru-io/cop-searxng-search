@@ -23,9 +23,24 @@ data:
     ui:
       static_use_hash: true
   limiter.toml: |
+    [botdetection.ip_limit]
+    link_token = true
+
+    [botdetection.ip_lists]
+    pass_ip = []
+    block_ip = []
+
     [limiter]
     enabled = true
 
     [limiter.ip]
     limit = 50
+    window = 60
+
+    [limiter.engine.google]
+    limit = 10
+    window = 60
+
+    [limiter.engine.bing]
+    limit = 20
     window = 60
