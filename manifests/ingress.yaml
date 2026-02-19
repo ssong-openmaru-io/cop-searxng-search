@@ -11,7 +11,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: searcxng-search.ask.msap.ai
+  - host: searcxng-search.example.com
     http:
       paths:
       - path: /
@@ -23,5 +23,5 @@ spec:
               number: 80
   tls:
   - hosts:
-    - flowise.ask.msap.ai
+    - earcxng-search.example.com
     secretName: cert-manager-route53-cert-manager-tls-key
