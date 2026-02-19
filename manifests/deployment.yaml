@@ -20,7 +20,7 @@ spec:
 
         env:
           - name: SEARXNG_BASE_URL
-            value: "http://searxng:8080"
+            value: "https://searcxng-search.ask.msap.ai"
           - name: UWSGI_WORKERS
             value: "2"
           - name: UWSGI_THREADS

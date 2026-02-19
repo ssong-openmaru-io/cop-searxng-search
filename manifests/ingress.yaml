@@ -5,10 +5,13 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/use-forwarded-headers: "true"
     nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
 spec:
   ingressClassName: nginx
   rules:
-  - host: search.local
+  - host: searcxng-search.ask.msap.ai
     http:
       paths:
       - path: /
@@ -18,3 +21,7 @@ spec:
             name: searxng
             port:
               number: 80
+  tls:
+  - hosts:
+    - flowise.ask.msap.ai
+    secretName: cert-manager-route53-cert-manager-tls-key

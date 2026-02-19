@@ -9,7 +9,7 @@ data:
     server:
       port: 8080
       bind_address: 0.0.0.0
-      secret_key: "change-this-secret"
+      secret_key: "2bf661a27c10b215f7eb9b2c720c23f168f099db42f1c56911a29e164c556b7d"
       limiter: false
       trusted_proxies:
         - 0.0.0.0/0
