@@ -22,3 +22,10 @@ data:
 
     ui:
       static_use_hash: true
+  limiter.toml: |
+    [limiter]
+    enabled = true
+
+    [limiter.ip]
+    limit = 50
+    window = 60
